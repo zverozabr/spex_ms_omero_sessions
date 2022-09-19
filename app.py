@@ -52,13 +52,10 @@ CORS(application, supports_credentials=True)
 
 if __name__ == '__main__':
     # init session refresher thread
-    host, port = getenv('MEMCACHED_HOST', 'localhost:11211').split(':')
-    worker = OmeroWebRefresherWorker(host, port)
-    worker.daemon = True
+    worker = OmeroWebRefresherWorker()
     worker.start()
 
-    worker = OmeroBlitzRefresherWorker(host, port)
-    worker.daemon = True
+    worker = OmeroBlitzRefresherWorker()
     worker.start()
 
     application.run()

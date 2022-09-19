@@ -10,8 +10,6 @@
 
 5. Set the following variables:
 ```
-MEMCACHED_HOST=127.0.0.1:11211
-
 OMERO_HOST=<Correct host>
 OMERO_WEB=http:<Correct web host>
 
